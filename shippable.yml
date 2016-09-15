@@ -9,4 +9,4 @@ python:
 build:
   ci:
     - python --version
-    - echo versionName
+    - echo $versionName
