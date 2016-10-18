@@ -17,4 +17,5 @@ notifications:
     payload:
       - versionName=$BRANCH.$BUILD_NUMBER  #Replace with the tag of the image you pushed during CI  
     on_success: always
-    on_failure: never
+    on_failure: always
+    on_cancelled: always
