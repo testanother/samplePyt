@@ -12,8 +12,17 @@ build:
     - echo $versionName
 integrations:
   hub:
-    - integrationName: "docker"
-      type: docker
+    - integrationName: email
+      type: email
+      recipients:
+        - exampleone@org.com
+        - exampletwo@org.com
+      branches:
+        only:
+          - master
+          - dev
+      on_success: always
+      on_failure: always
 notifications:
   - integrationName: trigger #Replace with name of the integration from subscription settings
     type: webhook
