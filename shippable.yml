@@ -10,7 +10,7 @@ build:
   ci:
     - python --version
     - echo $versionName
-notifications:
+integrations:
   - integrationName: trigger2 #Replace with name of the integration from subscription settings
     type: webhook
     payload:
