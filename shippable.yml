@@ -10,11 +10,3 @@ build:
   ci:
     - python --version
     - echo $versionName
-integrations:
-  notifications:
-    - integrationName: trigger2 #Replace with name of the integration from subscription settings
-      type: webhook
-      payload:
-        - versionName=$BRANCH.$BUILD_NUMBER  #Replace with the tag of the image you pushed during CI  
-      on_success: always
-      on_failure: never
