@@ -2,7 +2,6 @@
 # Language setting
 language: python
 
-# Version number
 python:
   - 2.6
 
