@@ -1,21 +1,4 @@
 
-# Language setting
-language: python
-
-# Version number
-python:
-  - 2.6
-
 build:
   ci:
-    - python --version
-    - echo $versionName
-notifications:
-  - integrationName: trigger #Replace with name of the integration from subscription settings
-    type: webhook
-    payload:
-      - versionName=$BRANCH.$BUILD_NUMBER  #Replace with the tag of the image you pushed during CI  
-    on_success: always
-    on_failure: always
-    on_cancelled: always
-
+    - nosetests python/sample.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
